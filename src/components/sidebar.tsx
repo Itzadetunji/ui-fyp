@@ -17,7 +17,7 @@ export default function Sidebar() {
       }`}
     >
       <div className="p-4 flex justify-between items-center">
-        {!collapsed && <h2 className="font-bold text-xl">Store</h2>}
+        {!collapsed && <h2 className="font-bold text-xl">Adetunji's Store</h2>}
         <Button
           variant="ghost"
           size="icon"
