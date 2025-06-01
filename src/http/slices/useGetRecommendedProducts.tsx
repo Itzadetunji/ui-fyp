@@ -1,20 +1,25 @@
-import { useMutation, useQuery } from "@tanstack/react-query";
+"use client";
+
+import { useMutation } from "@tanstack/react-query";
 import { AxiosError, AxiosResponse } from "axios";
-import { APIVersion1GetProducts } from "../v1";
+import {
+  APIVersion1GetProducts,
+  APIVersion1GetRecommendedProducts,
+} from "../v1";
 import { ModelsType, Product } from "./useSearchProducts";
 
-const useSearchProducts = () => {
+const useGetRecommendedProducts = () => {
   return useMutation<
     AxiosResponse<Product[]>,
     AxiosError<Error>,
     {
-      queryKey: string;
       items_no: number;
+      user_id: string;
       models: ModelsType;
     }
   >({
-    mutationFn: APIVersion1GetProducts,
+    mutationFn: APIVersion1GetRecommendedProducts,
   });
 };
 
-export default useSearchProducts;
+export default useGetRecommendedProducts;

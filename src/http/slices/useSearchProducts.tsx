@@ -1,3 +1,5 @@
+"use client";
+
 import { useMutation, useQuery } from "@tanstack/react-query";
 import { AxiosError, AxiosResponse } from "axios";
 import { APIVersion1GetProducts } from "../v1";
@@ -33,7 +35,7 @@ const useSearchProducts = () => {
     AxiosResponse<Product[]>,
     AxiosError<Error>,
     {
-      queryKey: string;
+      query: string;
       items_no: number;
       models: ModelsType;
     }

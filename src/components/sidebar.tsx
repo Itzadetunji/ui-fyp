@@ -31,7 +31,7 @@ export default function Sidebar() {
         <Link
           href="/"
           className={`flex items-center px-4 py-3 text-gray-700 hover:bg-gray-100 ${
-            pathname === "/" ? "bg-gray-100 border-r-2 border-blue-500" : ""
+            pathname === "/" ? "bg-gray-100 border-r-2 border-gray-500" : ""
           }`}
         >
           <Home className="h-5 w-5" />
@@ -41,7 +41,7 @@ export default function Sidebar() {
           href="/profile"
           className={`flex items-center px-4 py-3 text-gray-700 hover:bg-gray-100 ${
             pathname === "/profile"
-              ? "bg-gray-100 border-r-2 border-blue-500"
+              ? "bg-gray-100 border-r-2 border-gray-500"
               : ""
           }`}
         >

@@ -1,10 +1,17 @@
-import ProductGrid from "@/components/product-grid";
+"use client";
+
+import HomeProductGrid from "@/components/home-product-grid";
 import Sidebar from "@/components/sidebar";
 import Header from "@/components/header";
 import { Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
+import { useDebounce } from "@/hooks/debounce";
+import { useState } from "react";
 
 export default function Home() {
+  const [searchTerm, setSearchTerm] = useState("");
+  const debouncedSearchTerm = useDebounce(searchTerm, 500);
+
   return (
     <div className="flex h-screen bg-gray-50">
       <Sidebar />
@@ -18,10 +25,12 @@ export default function Home() {
               <Input
                 placeholder="Search products..."
                 className="pl-10"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
               />
             </div>
           </div>
-          <ProductGrid />
+          <HomeProductGrid searchTerm={debouncedSearchTerm} />
         </main>
       </div>
     </div>

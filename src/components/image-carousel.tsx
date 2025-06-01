@@ -45,7 +45,7 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
             <Button
               variant="ghost"
               size="icon"
-              className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-200 h-8 w-8"
+              className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-200 h-8 w-8 cursor-pointer"
               onClick={goToPrevious}
             >
               <ChevronLeft className="h-4 w-4" />
@@ -54,7 +54,7 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
             <Button
               variant="ghost"
               size="icon"
-              className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-200 h-8 w-8"
+              className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-200 h-8 w-8 cursor-pointer"
               onClick={goToNext}
             >
               <ChevronRight className="h-4 w-4" />
