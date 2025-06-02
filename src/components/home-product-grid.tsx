@@ -13,8 +13,8 @@ const HomeProductGrid: React.FC<{ searchTerm: string }> = (props) => {
       items_no: 20,
       query: props.searchTerm,
       models: {
-        content: 0.5,
-        sentiment: 0.5,
+        content: 0.2,
+        sentiment: 0.8,
       },
     });
   }, [props.searchTerm]);
